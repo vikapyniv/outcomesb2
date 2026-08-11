@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HW 1A — Listening &amp; Grammar | Outcomes B2</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;max-width:900px;margin:28px auto;padding:0 18px 50px;line-height:1.7;color:#1d1d1f;background:#fff}
+.audio-box{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);padding:14px 0 10px;z-index:10;border-bottom:1px solid #ddd;margin-bottom:18px}
+audio{width:100%}
+.status{font-size:14px;color:#666;margin-top:6px;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+button{border:1px solid #c7c7c7;background:#f7f7f7;border-radius:8px;padding:7px 12px;font-size:14px;cursor:pointer}
+button:hover{background:#ededed}
+#continueBtn{display:none;background:#111;color:#fff;border-color:#111}
+.line{display:none;margin:10px 0;padding:10px 12px;border-radius:10px;background:#fafafa}
+.line.visible{display:block}
+.line.current{background:#f1f5ff}
+.txt{font-size:17px}
+.gap{font:inherit;border:none;border-bottom:2px solid #777;background:#fff;text-align:center;padding:1px 4px;outline:none;border-radius:3px 3px 0 0}
+.gap:focus{border-bottom-color:#111;background:#fff}
+.gap.correct{border-bottom-color:#16803a;background:#eefaf2}
+.gap.wrong{border-bottom-color:#c62828;background:#fff0f0}
+.replay{margin-top:8px;font-size:13px}
+.controls{margin-top:28px;display:flex;gap:8px;flex-wrap:wrap}
+:root{--deep:#041f36;--navy:#06395b;--ocean:#087697;--aqua:#18c6cf;--ink:#062b44;--muted:#55768a;--line:#b9e8ee;--pale:#eafafd;--ok:#16845a;--bad:#c04b4b;--shadow:0 18px 46px rgba(2,45,70,.13)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{max-width:none;margin:0;padding:0 0 70px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 85% 3%,rgba(36,224,223,.2),transparent 25%),linear-gradient(145deg,#f8feff,#e6f9fb 55%,#caedf3)}.topbar{position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(185,232,238,.9);background:rgba(250,254,255,.91);backdrop-filter:blur(16px)}.topbar-inner{max-width:1050px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:14px;font-weight:900}.back{padding:8px 12px;border:1px solid #a6dce3;border-radius:999px;color:#075f82;background:#e7fafc;text-decoration:none;font-size:13px}.topbar small{display:block;color:var(--muted);font-weight:600;font-size:12px}.wrap{max-width:1050px;margin:auto;padding:34px 20px}.hero{position:relative;overflow:hidden;margin-bottom:25px;padding:34px;border-radius:25px;color:white;background:linear-gradient(135deg,var(--deep),var(--ocean));box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:260px;height:260px;right:-90px;bottom:-170px;border:1px solid rgba(117,239,242,.28);border-radius:50%}.eyebrow{color:#89eef1;font-size:12px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.hero h1{margin:10px 0 12px;font-size:clamp(34px,5vw,58px);line-height:1;letter-spacing:-.05em}.hero p{max-width:720px;margin:0;color:#d4f3f6}.task-section{margin-top:24px;padding:28px;border:1px solid var(--line);border-radius:23px;background:rgba(255,255,255,.95);box-shadow:var(--shadow)}.section-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:20px}.section-kicker{color:#087697;font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.section-head h2{margin:6px 0 7px;font-size:clamp(25px,3.2vw,39px);letter-spacing:-.035em}.section-head p{max-width:720px;margin:0;color:var(--muted)}.number{flex:0 0 auto;width:50px;height:50px;display:grid;place-items:center;border-radius:16px;color:white;background:linear-gradient(135deg,#18cbd2,#087697);font-size:20px;font-weight:950}.audio-box{position:sticky;top:69px;margin:0 0 18px;padding:15px;border:1px solid #b9e8ee;border-radius:17px;background:rgba(239,252,253,.96);box-shadow:0 9px 24px rgba(5,76,100,.09)}audio{accent-color:#087697}.status{color:var(--muted)}button{padding:9px 13px;border:1px solid #a9dbe2;border-radius:10px;color:#075f82;background:#edfafd;font-weight:800}button:hover{background:#dff6f8}#continueBtn{color:white;border-color:#087697;background:#087697}.line{margin:10px 0;padding:14px 16px;border:1px solid #d0e9ed;border-radius:13px;background:#f9feff}.line.current{border-color:#56cbd4;background:#e8fafc}.txt{font-size:16px}.gap{border-bottom:2px solid #7daeb9;color:var(--ink);background:#fff}.gap:focus{border-bottom-color:#18bfc9;box-shadow:0 3px 0 rgba(24,191,201,.12)}.gap.correct,.grammar-input.correct{border-color:var(--ok);background:#eaf8f0}.gap.wrong,.grammar-input.wrong{border-color:var(--bad);background:#fff0ef}.controls{padding-top:18px;border-top:1px solid var(--line)}.grammar-list{display:grid;gap:12px}.grammar-item{padding:16px 18px;border:1px solid #cce7eb;border-radius:15px;background:linear-gradient(145deg,#fff,#f3fcfd);font-size:16px;line-height:1.75}.grammar-number{display:inline-grid;width:29px;height:29px;margin-right:8px;place-items:center;border-radius:9px;color:white;background:#087697;font-size:13px;font-weight:900}.grammar-input{width:130px;max-width:40vw;margin:0 5px;padding:5px 8px;border:1px solid #9bcbd3;border-bottom:3px solid #087697;border-radius:8px;background:white;font:inherit;text-align:center;outline:none}.grammar-feedback{min-height:24px;margin-top:14px;color:var(--muted);font-weight:850}.footer{text-align:center;margin-top:27px;color:var(--muted);font-size:12px}@media(max-width:650px){.wrap{padding:20px 12px}.hero,.task-section{padding:22px}.section-head{flex-direction:column-reverse}.number{width:42px;height:42px}.audio-box{top:68px}.topbar-inner{align-items:flex-start;flex-direction:column}.grammar-input{width:105px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner"><a class="back" href="./">← Back to Unit 1</a><span>HW 1A · What kind of things are you into?<small>Outcomes B2 · Entertainment</small></span></div></header>
+<main class="wrap"><section class="hero"><div class="eyebrow">Unit 1A · Homework</div><h1>Listen, notice, practise</h1><p>Work through the conversation one part at a time, then review the language of present and past habits.</p></section>
+<section class="task-section"><div class="section-head"><div><div class="section-kicker">Listening</div><h2>Listen and complete the gaps</h2><p>Play the recording. It pauses at key moments so you can type the missing words. Use Replay when you need to hear a line again.</p></div><div class="number">01</div></div>
+<div class="audio-box">
+  <audio id="audio" controls preload="auto"></audio>
+  <div class="status"><span id="status">Start the audio from 0:00.</span><button id="continueBtn">Continue ▶</button></div>
+</div>
+<div id="transcript"><div class="line" data-start="0.0" id="seg1"><div class="txt">A: So, what kind of things <input class="gap" data-answer="do" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="you" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="do" style="width:52px" autocomplete="off" spellcheck="false"> in your free time?</div><button class="replay" onclick="replaySegment(0.0,4.0)">↻ Replay</button></div><div class="line" data-start="4.0" id="seg2"><div class="txt">B: I guess films are my <input class="gap" data-answer="main" style="width:62px" autocomplete="off" spellcheck="false"> thing.</div><button class="replay" onclick="replaySegment(4.0,6.0)">↻ Replay</button></div><div class="line" data-start="6.0" id="seg3"><div class="txt">A: Really? Do you go to the cinema much then?<br>B: Oh, all the time. I mean, I go at least once a week, but I’ll often go two or three times!<br>A: Wow! That is a lot!</div></div><div class="line" data-start="20.0" id="seg4"><div class="txt">B: Yeah. I mean, it <input class="gap" data-answer="depends" style="width:95px" autocomplete="off" spellcheck="false"> what’s <input class="gap" data-answer="on" style="width:52px" autocomplete="off" spellcheck="false">, of course.</div><button class="replay" onclick="replaySegment(20.0,22.0)">↻ Replay</button></div><div class="line" data-start="22.0" id="seg5"><div class="txt">A: Right. What about you? Do you go much?</div></div><div class="line" data-start="25.0" id="seg6"><div class="txt">B: <input class="gap" data-answer="Now" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="and" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="then" style="width:62px" autocomplete="off" spellcheck="false">, if there’s something I really want to see,</div><button class="replay" onclick="replaySegment(25.0,28.0)">↻ Replay</button></div><div class="line" data-start="28.0" id="seg7"><div class="txt">but I’m happy just to watch at home.<br>A: Really? But if you’re watching an action movie with all the special effects, don’t you want to see it on the big screen?</div></div><div class="line" data-start="39.0" id="seg8"><div class="txt">B: Yeah, I guess, but <input class="gap" data-answer="to" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="be" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="honest" style="width:84px" autocomplete="off" spellcheck="false">, I’m not that <input class="gap" data-answer="keen" style="width:62px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="on" style="width:52px" autocomplete="off" spellcheck="false"> action movies anyway, so …</div><button class="replay" onclick="replaySegment(39.0,43.0)">↻ Replay</button></div><div class="line" data-start="43.0" id="seg9"><div class="txt">A: Really? I mean, what about the Avengers films? Or Batman?</div></div><div class="line" data-start="47.0" id="seg10"><div class="txt"><input class="gap" data-answer="Stuff" style="width:73px" autocomplete="off" spellcheck="false"> like that?</div><button class="replay" onclick="replaySegment(47.0,48.0)">↻ Replay</button></div><div class="line" data-start="49.0" id="seg11"><div class="txt">B: Yeah, The Suicide Squad was OK, I <input class="gap" data-answer="suppose" style="width:95px" autocomplete="off" spellcheck="false">, but I’d <input class="gap" data-answer="rather" style="width:84px" autocomplete="off" spellcheck="false"> see other things.</div><button class="replay" onclick="replaySegment(49.0,54.0)">↻ Replay</button></div><div class="line" data-start="54.0" id="seg12"><div class="txt">A: Actually, there was this great Korean film on TV last night – Oldboy.<br>B: Oh yeah, I started watching it, but I turned over.<br>A: You didn’t like it?<br>B: Not really.</div></div><div class="line" data-start="65.0" id="seg13"><div class="txt">It was so <input class="gap" data-answer="over-the-top" style="width:130px" autocomplete="off" spellcheck="false">.</div><button class="replay" onclick="replaySegment(65.0,68.0)">↻ Replay</button></div><div class="line" data-start="68.0" id="seg14"><div class="txt">That scene where he eats the live octopus! I don’t know.</div></div><div class="line" data-start="71.0" id="seg15"><div class="txt">It was all <input class="gap" data-answer="a" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="bit" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="too" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="weird" style="width:73px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="for" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="my" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="liking" style="width:84px" autocomplete="off" spellcheck="false">.</div><button class="replay" onclick="replaySegment(71.0,73.0)">↻ Replay</button></div><div class="line" data-start="73.0" id="seg16"><div class="txt">Didn’t you find it strange?<br>A: I guess it is a bit, but that’s what I like about it. They actually did an American remake of it, but I prefer the original –</div></div><div class="line" data-start="84.0" id="seg17"><div class="txt">I’ve seen it <input class="gap" data-answer="loads" style="width:73px" autocomplete="off" spellcheck="false"> of times.</div><button class="replay" onclick="replaySegment(84.0,85.0)">↻ Replay</button></div><div class="line" data-start="85.0" id="seg18"><div class="txt">B: Really? OK. As I say, it’s not really my kind of thing. I prefer a good drama.</div></div><div class="line" data-start="93.0" id="seg19"><div class="txt">So what other films <input class="gap" data-answer="are" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="you" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="into" style="width:62px" autocomplete="off" spellcheck="false">?</div><button class="replay" onclick="replaySegment(93.0,95.0)">↻ Replay</button></div><div class="line" data-start="95.0" id="seg20"><div class="txt">A: Oh, all sorts. I mean, I’m really into action films and stuff like that, but I’ll watch most things really. As I say, I go most weeks, so, you know …<br>B: Have you seen Green Book?<br>A: Yeah. Have you?<br>B: No, but I’ve heard it’s good. I should probably try and catch it sometime.</div></div><div class="line" data-start="114.0" id="seg21"><div class="txt">A: Yeah, you should. It’s <input class="gap" data-answer="astonishing" style="width:130px" autocomplete="off" spellcheck="false">. I was <input class="gap" data-answer="in" style="width:52px" autocomplete="off" spellcheck="false"> <input class="gap" data-answer="tears" style="width:73px" autocomplete="off" spellcheck="false"> by the end.</div><button class="replay" onclick="replaySegment(114.0,119.0)">↻ Replay</button></div><div class="line" data-start="119.0" id="seg22"><div class="txt">B: Yeah?</div></div><div class="line" data-start="121.0" id="seg23"><div class="txt">A: Yeah. It’s quite <input class="gap" data-answer="upsetting" style="width:117px" autocomplete="off" spellcheck="false"> in places, quite <input class="gap" data-answer="disturbing" style="width:128px" autocomplete="off" spellcheck="false"> – but the two main characters are just incredible …</div><button class="replay" onclick="replaySegment(121.0,127.0)">↻ Replay</button></div><div class="line" data-start="127.0" id="seg24"><div class="txt">and it’s based on a true story as well, I think.<br>B: I’ll check it out then.<br>A: Yeah, you should. Honestly, it’s brilliant.</div></div></div>
+<div class="controls">
+<button onclick="checkAnswers()">Check answers</button>
+<button onclick="showAnswers()">Show answers</button>
+<button onclick="resetAll()">Reset</button>
+</div>
+</section>
+<section class="task-section"><div class="section-head"><div><div class="section-kicker">Grammar</div><h2>Habits</h2><p>Complete each sentence by adding one word in every gap.</p></div><div class="number">02</div></div>
+<div class="grammar-list" id="grammarTask">
+<div class="grammar-item"><span class="grammar-number">1</span>I don’t <input class="grammar-input" data-answer="tend" aria-label="Grammar answer 1"> to go to many concerts these days. I’m too busy working.</div>
+<div class="grammar-item"><span class="grammar-number">2</span>I mostly read stuff for work, but I do read novels every now and <input class="grammar-input" data-answer="then" aria-label="Grammar answer 2">.</div>
+<div class="grammar-item"><span class="grammar-number">3</span>He’s basically on TikTok all the <input class="grammar-input" data-answer="time" aria-label="Grammar answer 3">. It’s taken over his life.</div>
+<div class="grammar-item"><span class="grammar-number">4</span>We don’t go to the cinema as much as we <input class="grammar-input" data-answer="used" aria-label="Grammar answer 4"> to before we had kids.</div>
+<div class="grammar-item"><span class="grammar-number">5</span>I <input class="grammar-input" data-answer="hardly" aria-label="Grammar answer 5"> ever read books, to be honest. I just read stuff online.</div>
+<div class="grammar-item"><span class="grammar-number">6</span>I used to go out a lot. I <input class="grammar-input" data-answer="would" aria-label="Grammar answer 6"> often go clubbing four or five nights a week.</div>
+<div class="grammar-item"><span class="grammar-number">7</span>As a <input class="grammar-input" data-answer="rule" aria-label="Grammar answer 7">, I tend not to listen to dance music. It’s not my kind of thing.</div>
+<div class="grammar-item"><span class="grammar-number">8</span><input class="grammar-input" data-answer="Did" aria-label="Grammar answer 8"> you ever use to go to the Teatro Colón when you lived in Buenos Aires?</div>
+</div><div class="controls"><button onclick="checkGrammar()">Check answers</button><button onclick="showGrammarAnswers()">Show answers</button><button onclick="resetGrammar()">Reset</button></div><div class="grammar-feedback" id="grammarFeedback" aria-live="polite"></div></section><div class="footer">Outcomes B2 · Unit 1A Homework</div></main>
+<script>
+const audio=document.getElementById('audio');
+const lines=[...document.querySelectorAll('.line')];
+const checkpoints=[4,6,22,28,43,48,54,68,73,85,95,119,127];
+const statusEl=document.getElementById('status');
+const audioParts=['homework-1a-audio.part-00','homework-1a-audio.part-01','homework-1a-audio.part-02','homework-1a-audio.part-03','homework-1a-audio.part-04','homework-1a-audio.part-05','homework-1a-audio.part-06'];
+Promise.all(audioParts.map(path=>fetch(path).then(response=>{if(!response.ok)throw new Error('Audio part failed to load');return response.arrayBuffer();}))).then(parts=>{audio.src=URL.createObjectURL(new Blob(parts,{type:'audio/mpeg'}));statusEl.textContent='Audio ready';}).catch(()=>{statusEl.textContent='Audio could not be loaded. Please refresh the page.';});
+const continueBtn=document.getElementById('continueBtn');
+let stoppedAt=new Set();
+let replaying=false, replayEnd=null;
+
+function reveal(t){
+  let last=null;
+  lines.forEach(line=>{
+    const s=parseFloat(line.dataset.start);
+    if(t+0.08>=s){line.classList.add('visible'); last=line;}
+    line.classList.remove('current');
+  });
+  if(last){last.classList.add('current'); last.scrollIntoView({behavior:'smooth',block:'center'});}
+}
+
+audio.addEventListener('timeupdate',()=>{
+  const t=audio.currentTime; reveal(t);
+  if(replaying && replayEnd!==null && t>=replayEnd-0.04){audio.pause(); replaying=false; replayEnd=null; statusEl.textContent='Replay finished.'; return;}
+  if(!replaying){
+    for(const cp of checkpoints){
+      if(t>=cp-0.04 && t<cp+0.35 && !stoppedAt.has(cp)){
+        audio.pause(); audio.currentTime=cp; stoppedAt.add(cp);
+        statusEl.textContent='Paused at '+formatTime(cp)+'. Fill the gaps or replay this part.';
+        continueBtn.style.display='inline-block';
+        break;
+      }
+    }
+  }
+});
+
+audio.addEventListener('play',()=>{continueBtn.style.display='none'; statusEl.textContent='Listening…';});
+continueBtn.onclick=()=>audio.play();
+
+function replaySegment(start,end){
+  audio.pause(); replaying=true; replayEnd=end; audio.currentTime=start; reveal(start); audio.play(); statusEl.textContent='Replaying '+formatTime(start)+'–'+formatTime(end)+'…';
+}
+function norm(s){return s.trim().toLowerCase().replace(/[’‘]/g,"'");}
+function checkAnswers(){
+ document.querySelectorAll('.gap').forEach(g=>{g.classList.remove('correct','wrong'); g.classList.add(norm(g.value)===norm(g.dataset.answer)?'correct':'wrong');});
+}
+function showAnswers(){document.querySelectorAll('.gap').forEach(g=>{g.value=g.dataset.answer;g.classList.remove('wrong');g.classList.add('correct');});}
+function resetAll(){
+ audio.pause(); audio.currentTime=0; stoppedAt.clear(); replaying=false; replayEnd=null;
+ document.querySelectorAll('.gap').forEach(g=>{g.value='';g.classList.remove('correct','wrong');});
+ lines.forEach(l=>l.classList.remove('visible','current'));
+ reveal(0); continueBtn.style.display='none'; statusEl.textContent='Start the audio from 0:00.';
+}
+function formatTime(s){const m=Math.floor(s/60); const sec=Math.round(s%60).toString().padStart(2,'0'); return m+':'+sec;}
+function grammarInputs(){return [...document.querySelectorAll('.grammar-input')];}
+function checkGrammar(){let correct=0;grammarInputs().forEach(g=>{const ok=norm(g.value)===norm(g.dataset.answer);g.classList.toggle('correct',ok);g.classList.toggle('wrong',!ok);if(ok)correct++;});const feedback=document.getElementById('grammarFeedback');feedback.textContent=correct===8?'Excellent — 8/8 correct!':correct+' / 8 correct. Check the highlighted gaps and try again.';feedback.style.color=correct===8?'#16845a':'#8a5b18';}
+function showGrammarAnswers(){grammarInputs().forEach(g=>{g.value=g.dataset.answer;g.classList.add('correct');g.classList.remove('wrong');});document.getElementById('grammarFeedback').textContent='All answers are shown.';}
+function resetGrammar(){grammarInputs().forEach(g=>{g.value='';g.classList.remove('correct','wrong');});document.getElementById('grammarFeedback').textContent='';}
+reveal(0);
+</script>
+</body>
+</html>
